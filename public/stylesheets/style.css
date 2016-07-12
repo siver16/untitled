@@ -1,0 +1,86 @@
+body {
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.cap{
+  display: inline-table;
+  height: 360px;
+  width: 250px;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px #ddd;
+  vertical-align: top;
+}
+
+.cap h2{
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.cap img{
+  width: 250px;
+}
+.button {
+  display: inline-block;
+  padding: 5px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #dddddd;
+  border: 1px solid #008;
+  font: 16px/1 Arial, sans-serif;
+  color: #333333;
+}
+.menu{
+  padding:0px;
+}
+.navigator{
+ border: 1px solid #c0c0c0;
+  width: 110px;
+  padding: 10px;
+  margin:10px ;
+}
+.navigator p{
+  margin: 0px;
+}
+.navigator h2{
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.formholder{
+  display: flex;
+}
+.formholder img{
+  margin: 10px;
+}
+.formholder p{
+  text-align: right;
+}
+.navid{
+  display: none;
+}
+.pager p {
+  display: inline-block;
+  color: darkviolet;
+  font-size: 16px;
+  font-weight: 400;
+}
+.pager a{
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+}
+.indexdiv{
+  display: inline-flex;
+}
+.indexdivform input{
+  width:200px;
+}

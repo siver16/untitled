@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <%include menu%>
+
+  <h1>Редактирование пробки.</h1>
+  <div class="formholder">
+    <div >
+      <form method="post" enctype="multipart/form-data" id="forma">
+        <p>ID:
+          <input type="text" name="id" value="<%=id%>" readonly="true"/>
+        </p>
+        <p>текст:
+          <textarea name="text"><%=text%></textarea>
+        </p>
+        <p>Заменить изображение:<br>
+          <input type="file" name="img"/>
+        </p>
+        <p>
+          <input type="submit" value="Сохранить изменения" />
+        </p>
+      </form>
+    </div>
+    <div>
+      <img src="<%=path%>">
+    </div>
+  </div>
+  </body>
+</html>

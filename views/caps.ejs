@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/navi.js"></script>
+  </head>
+  <body>
+  <%include menu%>
+  <h1>пробки</h1>
+  <%include pager%>
+  <div id="caps">
+    <% caps.forEach(function(cap){%>
+    <%include cap%>
+    <% })%>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+
+  <%include menu%>
+
+  <h1>Добавление изображения новой пробки.</h1>
+  <div id="caps">
+    <% if(picExists){%>
+      <p>Уже существует изображение <%=id%>.jpg при загрузке нового оно будет заменено.</p>
+    <%}%>
+    <form method="post" enctype="multipart/form-data" id="forma">
+      <p>ID:
+        <input type="text" name="id" value="<%=id%>" readonly="true"/>
+      </p>
+      <p>Изображение:
+        <input type="file" name="img"/>
+      </p>
+      <p>
+        <input type="submit" value="добавить" />
+      </p>
+    </form>
+  </div>
+  </body>
+</html>

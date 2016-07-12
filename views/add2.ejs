@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <%include menu%>
+
+  <h1>Добавление текста новой пробки.</h1>
+  <div class="formholder">
+    <div >
+      <form method="post" enctype="multipart/form-data" id="forma">
+        <p>ID:
+          <input type="text" name="id" value="<%=cap.id%>" readonly="true"/>
+        </p>
+        <p>текст:
+          <textarea name="text"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="добавить" />
+        </p>
+      </form>
+    </div>
+    <div>
+      <img src="<%=cap.path%>">
+    </div>
+  </div>
+  </body>
+</html>
