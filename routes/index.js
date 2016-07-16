@@ -29,7 +29,7 @@ router.route('/')
                 dbquery("SELECT * FROM caps WHERE id = " + Math.floor(Math.random() *len),function(err, ress, fields) {
                     if (err) throw err;
                     if (ress.length==0) return next();
-                    res.render('index',{'num':len,'cap':{id:ress[0].id,text:ress[0].text,path:tools.pathMaker(ress[0].id,4),'title':'Случайная пробка'},'perpage':config.get('perpage')});
+                    res.render('index',{'num':len,'cap':{id:ress[0].id,text:ress[0].text,path:tools.pathMaker(ress[0].id,4),'title':'Случайная пробка @@@'},'perpage':config.get('perpage')});
                 });
             });
         };
