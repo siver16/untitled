@@ -15,7 +15,9 @@ var config = require('../config');
 
 var port = normalizePort(process.env.PORT || config.get('port'));
 app.set('port', port);
-app.set('host', '185.86.79.240');
+//app.set('host', '185.86.79.240');
+//app.set('host', '0.0.0.0');
+
 
 
 /**

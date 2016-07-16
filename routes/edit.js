@@ -30,9 +30,11 @@ router.route('/')
             }
         });
         req.busboy.on('file',function(fieldname,file,filename){
-            var pat=path.dirname(__dirname)+'/public/images/pics/' + name+".jpg";
-            fstream = fs.createWriteStream(pat);
-            file.pipe(fstream);
+            if(filename){
+                var pat=path.dirname(__dirname)+'/public/images/pics/' + name+".jpg";
+                fstream = fs.createWriteStream(pat);
+                file.pipe(fstream);
+            }
         })
     })
 module.exports = router;
