@@ -13,5 +13,8 @@
     <%include cap%>
     <% })%>
   </div>
+  <%if(caps[0].gonext){%>
+  <input type="button" value="редактировать след." onclick="location.href = '/edit?id=<%=caps[0].gonext%>'">
+  <%}%>
   </body>
 </html>

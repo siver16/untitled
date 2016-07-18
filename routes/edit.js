@@ -25,7 +25,7 @@ router.route('/')
                 dbquery("UPDATE caps SET text='"+text+"' WHERE caps.id="+name, function(err, ress, fields) {
                     if (err) throw err;
                     if (ress.length==0) return next();
-                    res.render('caps',{'caps':[{id:name,text:text,path:tools.pathMaker(name,4)}],'page':1,'pages':1,'link':'/'})
+                    res.render('caps',{'caps':[{id:name,text:text,path:tools.pathMaker(name,4)}],'page':1,'pages':1,'link':'/','gonext':name*1+1})
                 });
             }
         });

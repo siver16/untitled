@@ -10,6 +10,7 @@ var pages;
 
 router.route('/')
     .get(function(req, res, next) {
+        console.log("index !!!!!");
         page=req.query.page;
         if(page){
             dbquery(reque +' LIMIT '+(page-1)*config.get('perpage')+','+config.get('perpage'),function(err, ress) {
@@ -19,7 +20,7 @@ router.route('/')
                 for(var i=0;i<ress.length;i++){
                     caps.push({id:ress[i].id,text:ress[i].text,path:tools.pathMaker(ress[i].id,4)});
                 }
-                res.render('caps',{'num':caps.length,caps:caps,'page':page,'pages':pages,'link':'/'});
+                res.render('caps',{'num':caps.length,caps:caps,'page':page,'pages':pages,'link':'/','gonext':-1});
             });
         }else{
             dbquery("SELECT COUNT(*) FROM caps",function(err, ress, fields) {
@@ -29,7 +30,7 @@ router.route('/')
                 dbquery("SELECT * FROM caps WHERE id = " + Math.floor(Math.random() *len),function(err, ress, fields) {
                     if (err) throw err;
                     if (ress.length==0) return next();
-                    res.render('index',{'num':len,'cap':{id:ress[0].id,text:ress[0].text,path:tools.pathMaker(ress[0].id,4),'title':'Случайная пробка @@@'},'perpage':config.get('perpage')});
+                    res.render('index',{'num':len,'cap':{id:ress[0].id,text:ress[0].text,path:tools.pathMaker(ress[0].id,4),'title':'Случайная пробка'},'perpage':config.get('perpage')});
                 });
             });
         };
@@ -47,7 +48,7 @@ router.route('/')
             for(var i=0;i<arofd.length;i++){
                 if(arofd[i].indexOf('-')>0){
                    var innerarofid= arofd[i].split('-');
-                    for(var j=innerarofid[0];j<=innerarofid[1];j++){
+                    for(var j=innerarofid[0];j<=innerarofid[1]*1;j++){
                         resin+=j+',';
                     }
                 }else{
@@ -72,7 +73,7 @@ router.route('/')
                 for(var i=0;i<ress.length;i++){
                     caps.push({id:ress[i].id,text:ress[i].text,path:tools.pathMaker(ress[i].id,4)});
                 }
-                res.render('caps',{'num':caps.length,caps:caps,'page':1,'pages':1,'link':'/'});
+                res.render('caps',{'num':caps.length,caps:caps,'page':1,'pages':1,'link':'/','gonext':-1});
             }
         });
     });

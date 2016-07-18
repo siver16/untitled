@@ -6,7 +6,9 @@
      <h2>id: <%=cap.id %></h2>
     <div style="padding: 5px">
         <input type="button" value="навигатор" onclick="navi(<%=cap.id %>)">
-        <input type="button" value="редактировать" onclick="location.href = '/edit?id='+<%=cap.id %>;">
+        <%if (locals.user){%>
+        <input type="button" value="редактировать" onclick="location.href = '/edit?id=<%=cap.id%>'">
+        <%}%>
     </div>
     <img src="<%=cap.path%>">
     <p>text: <%=cap.text %></p>

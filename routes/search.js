@@ -17,7 +17,7 @@ router.route('/')
                 for(var i=0;i<ress.length;i++){
                     caps.push({id:ress[i].id,text:ress[i].text,path:tools.pathMaker(ress[i].id,4)});
                 }
-                res.render('caps',{'num':caps.length,caps:caps,'page':page,'pages':pages,'link':'/search'});
+                res.render('caps',{'num':caps.length,caps:caps,'page':page,'pages':pages,'link':'/search','gonext':-1});
             });
         }else{
             res.render('search');
@@ -41,7 +41,7 @@ router.route('/')
                     for(var i=0;i<ress.length;i++){
                         caps.push({id:ress[i].id,text:ress[i].text,path:tools.pathMaker(ress[i].id,4)});
                     }
-                    res.render('caps',{'num':caps.length,caps:caps,'page':1,'pages':1,'link':'/search'});
+                    res.render('caps',{'num':caps.length,caps:caps,'page':1,'pages':1,'link':'/search','gonext':-1});
                 }
             });
     });

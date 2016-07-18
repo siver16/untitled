@@ -1,5 +1,16 @@
-<menu class="menu">
-  <a href="/" class="button">Главная</a>
-  <a href="/search" class="button">Поиск</a>
-  <a href="/add" class="button">Добавить</a>
-</menu>
+<%if (locals.user){%>
+    <menu class="menu">
+      <a href="/" class="button">Главная</a>
+      <a href="/search" class="button">Поиск</a>
+      <a href="/add" class="button">Добавить</a>
+      <a href="/logout" class="button">Выход</a>
+    </menu>
+<%}else{%>
+    <menu class="menu">
+      <a href="/" class="button">Главная</a>
+      <a href="/search" class="button">Поиск</a>
+      <a href="/login" class="button">Вход</a>
+      <a href="/register" class="button">Регистрация</a>
+    </menu>
+<%}%>
+
