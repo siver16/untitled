@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <%include menu%>
+  <h1><%=title%></h1>
+  <p>Заполните форму для входа</p>
+  <%include messages%>
+   <form method="post" action="/login" >
+          <p><input type="text" name="name" placeholder="логин"/></p>
+          <p><input type="password" name="pass" placeholder="пароль"/></p>
+          <p><input type="submit" value="Вход"/></p>
+   </form>
+  </body>
+</html>
