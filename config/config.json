@@ -1,9 +1,6 @@
 {
   "port":"80",
-  "dbconf":{   "host":"localhost",
-    "user":"root",
-    "password":"ghbyn",
-    "database":"caps"
+  "dbconf":{  //
   },
   "perpage":20
 }
